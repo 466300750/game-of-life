@@ -2,6 +2,7 @@ package com.tw.model;
 
 public class Cell {
     private int live;
+    private int liveNeighborNums;
 
     public Cell(int live) {
         this.live = live;
@@ -17,5 +18,13 @@ public class Cell {
 
     public int getLive() {
         return live;
+    }
+
+    public int getLiveNeighborNums() {
+        return liveNeighborNums;
+    }
+
+    public void setLiveNeighborNums(int liveNeighborNums) {
+        this.liveNeighborNums = liveNeighborNums;
     }
 }

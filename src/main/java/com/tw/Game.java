@@ -1,19 +1,13 @@
 package com.tw;
 
 import com.tw.model.Grid;
+import com.tw.ui.Frame;
 
 public class Game {
 
     public static void main(String[] args) {
-        Grid grid = new Grid(50, 50);
-        while (true) {
-            System.out.println(grid);
-            grid.nextGeneration();
-
-            try {
-                Thread.sleep(100);
-            } catch (Exception ignored) {
-            }
-        }
+        Grid grid = new Grid(100, 100);
+        Frame frame = new Frame(grid);
+        frame.run();
     }
 }
